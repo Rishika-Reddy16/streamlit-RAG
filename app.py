@@ -40,7 +40,7 @@ def query(question, vectordb):
     try:
         docs = vectordb.similarity_search(question, k=3)
         context = "\n\n".join([doc.page_content for doc in docs])
-        llm = ChatGoogleGenerativeAI(model="gemini-2.5-pro-exp-03-25")
+        llm = ChatGoogleGenerativeAI(model="gemini-2.5-pro-preview-03-25")
         prompt = f"""
         You are a helpful assistant. Based on the document and your own knowledge, answer the question below.
         Give a direct, accurate answer without referring to the document's contents or whether the answer is found there." 
