@@ -1,5 +1,4 @@
 import streamlit as st
-from dotenv import load_dotenv
 import fitz
 from langchain.text_splitter import CharacterTextSplitter
 from langchain_chroma import Chroma
