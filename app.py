@@ -6,6 +6,9 @@ from langchain_google_genai import GoogleGenerativeAIEmbeddings, ChatGoogleGener
 import os
 
 os.environ["GOOGLE_API_KEY"] = st.secrets["my_secrets"]["GOOGLE_API_KEY"]
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 # Function to load PDF from uploaded file
 def load_doc(uploaded_file):
